@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - Ryan Earwood</h1>
+    <h1>WDD 131 - Dynamic Web Fundamentals - Ryan Earwood</h1>
+    <nav>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn Profile</a></li>
+            <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite Scripture</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/profile.jpg" alt="Hello, my name is Ryan Earwood" width="200">
+            <p>My name is Ryan Earwood and I was born in Myrtle Beach, South Carolina.  I am currently a full-time student at BYU-I working on my bachelors degree in software development and programming.
+                I am married with two children and I enjoy learning how to program and develop video games on the side.  
+            </p>
+            <ul>
+                <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com">W3Schools</a></li>
+                <li><a href="https://www.freecodecamp.org">freeCodeCamp</a></li>
+                <li><a href="https://reactjs.org">React</a></li>
+                <li><a href="https://angular.io">Angular</a></li>
+            </ul>
+        </section>
+        
+        <section class="card">
+            <h2>Virginia, USA</h2>
+            <img src="https://national-park.com/wp-content/uploads/2016/04/Welcome-to-Shenandoah-National-Park.jpg" alt="Virginia">
+            <p>I live in Virginia in the United States.  The weather is very mild with four seasons. Virginia can receive freezing weather even in May. Virginia is on the eastern side of the United States. It is close to the capital of America in Washington DC.      </p>
+            
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> Ryan Earwood, Virginia</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = `Last Updated: ${document.lastModified}`;
+    </script>
 </body>
 </html>
