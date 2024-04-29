@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Web Fundamentals</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals course page.">
+    <meta name="author" content="[Ryan Earwood]">
+    <title>WDD 131 - Dynamic Web Fundamentals - Ryan Earwood</title>
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <h1>WDD 131 - Dynamic Web Fundamentals - Ryan Earwood</h1>
-    <nav>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn Profile</a></li>
-            <li><a href="https://byui.instructure.com/">I-Learn</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite Scripture</a></li>
-            <li><a href="#">Final Project</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn Profile</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section class="card">
             <h2>About Me</h2>
@@ -45,9 +49,13 @@
         <p id="lastModified"></p>
     </footer>
     <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('currentyear').textContent = currentYear;
+            const lastModifiedDate = document.lastModified;
+            document.getElementById('lastModified').textContent = `Last Updated: ${lastModifiedDate}`;
+        });
         
-        document.getElementById('currentyear').textContent = new Date().getFullYear();
-        document.getElementById('lastModified').textContent = `Last Updated: ${document.lastModified}`;
     </script>
 </body>
 </html>
