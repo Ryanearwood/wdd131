@@ -15,17 +15,16 @@ window.onload = updateFooter;
 
 
 function toggleMenu() {
-    var nav = document.getElementById('navMenu');
-    var button = document.getElementById('menuButton');
+    var nav = document.getElementById('menu');
+    var button = document.getElementById('menuToggle');
 
-    
     nav.classList.toggle('hidden');
 
-    
     if (nav.classList.contains('hidden')) {
         button.textContent = '☰';
     } else {
         button.textContent = 'X';
     }
 }
+
 

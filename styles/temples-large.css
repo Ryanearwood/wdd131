@@ -6,4 +6,26 @@
     main {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     }
+
+  
+    #menuToggle {
+        display: none;
+    }
+
+    
+    #menu {
+        position: static;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        background: none;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform: none;
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
 }

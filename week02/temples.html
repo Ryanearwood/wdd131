@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Title</title>
+    <title>Temple Album</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temple Album.">
+    <meta name="author" content="[Ryan Earwood]">
     <link rel="stylesheet" type="text/css" href="/styles/temples.css">
-    <link rel="stylesheet" type="text/css" href="/styles/temples-large.css">
-    <link rel="stylesheet" type="text/css" href="mobile.css">
-    <link rel="stylesheet" type="text/css" href="desktop.css">
+    <link rel="stylesheet" type="text/css" href="/styles/temples-large.css" media="screen and (min-width: 600px)">
     <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Temple Album</h1>
-        <nav>
+        <button id="menu"></button>
+        <nav class="navigation">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
@@ -20,6 +23,7 @@
                 <li><a href="#">Small</a></li>
             </ul>
         </nav>
+        
     </header>
     <main>
         <h2>Current Menu Selection</h2>
