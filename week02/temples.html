@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Title</title>
+    <link rel="stylesheet" type="text/css" href="/styles/temples.css">
+    <link rel="stylesheet" type="text/css" href="/styles/temples-large.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="stylesheet" type="text/css" href="desktop.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Current Menu Selection</h2>
+        
+        <figure>
+            <img src="/images/temple1.jpg" alt="Temple">
+            <figcaption>Washington, D.C. Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="/images/temple2.jpg" alt="Temple">
+            <figcaption>Richmond, Virginia Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="/images/temple3.jpg" alt="Temple">
+            <figcaption>Atlanta, Georgia Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="/images/temple4.jpg" alt="Temple">
+            <figcaption>Tokyo, Japan Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="/images/temple5.jpg" alt="Temple">
+            <figcaption>San Diego, California Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="/images/temple6.jpg" alt="Temple">
+            <figcaption>Portland, Oregon Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="/images/temple7.jpg" alt="Temple">
+            <figcaption>Salt Lake City, Utah Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="/images/temple8.jpg" alt="Temple">
+            <figcaption>Los Angeles, California Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="/images/temple9.jpg" alt="Temple">
+            <figcaption>Manila, Philippines Temple</figcaption>
+        </figure>
+        
+        
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> Ryan Earwood, Virginia</p>
+        <p id="lastModified"></p>
+        
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('currentyear').textContent = currentYear;
+            const lastModifiedDate = document.lastModified;
+            document.getElementById('lastModified').textContent = `Last Updated: ${lastModifiedDate}`;
+        });
+        
+    </script>
+</body>
+</html>
