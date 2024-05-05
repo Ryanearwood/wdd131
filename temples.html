@@ -73,8 +73,8 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            const currentYear = new Date().getFullYear();
-            document.getElementById('currentyear').textContent = currentYear;
+            const year = new Date().getFullYear();
+            document.getElementById('currentyear').textContent = year;
             const lastModifiedDate = document.lastModified;
             document.getElementById('lastModified').textContent = `Last Updated: ${lastModifiedDate}`;
         });
