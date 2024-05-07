@@ -1,31 +1,36 @@
-@media (min-width: 768px) {
-    nav {
-        justify-content: flex-start;
-    }
+@media (min-width: 340px) {
+  #menu {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+  }
+}
 
-    main {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    }
+@media (min-width: 572px) {
+  .container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-  
-    #menuToggle {
-        display: none;
-    }
+@media (min-width: 864px) {
+  .container {
+      grid-template-columns: repeat(3, 1fr);
+  }
 
-    
-    #menu {
-        position: static;
-        width: auto;
-        margin: 0;
-        padding: 0;
-        background: none;
-        list-style-type: none;
-        -webkit-font-smoothing: antialiased;
-        transform: none;
-    }
+  header {
+      flex-direction: row;
+  }
 
-    #menu li {
-        padding: 10px 0;
-        font-size: 22px;
-    }
+  #menu {
+      display: none;
+  }
+
+  .navigation {
+      flex-direction: row;
+  }
+
+  .navigation a {
+      display: block;
+      flex: 1 1 auto;
+  }
 }

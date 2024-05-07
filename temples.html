@@ -13,20 +13,20 @@
 <body>
     <header>
         <h1>Temple Album</h1>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
+        <button id="menu"></button>
+        <nav>
+            <ul class="navigation wrap">
+                <li><a class="active" href="#" title="Home">Home</a></li>
+                <li><a href="#" title="Old">Old</a></li>
+                <li><a href="#" title="New">New</a></li>
+                <li><a href="#" title="Large">Large</a></li>
+                <li><a href="#" title="Small">Small</a></li>
             </ul>
         </nav>
-        
     </header>
     <main>
-        <h2>Current Menu Selection</h2>
-        
+        <h2>Home</h2>
+        <div class="container">
         <figure>
             <img src="images/temple1.jpg" alt="Temple" width="500" height="600">
             <figcaption>Washington, D.C. Temple</figcaption>
@@ -65,20 +65,15 @@
         </figure>
         
         
+        </div>
     </main>
     <footer>
-        <p>© <span id="currentyear"></span> Ryan Earwood, Virginia</p>
-        <p id="lastModified"></p>
-        
+        <div>
+            <p>©<span id="currentyear"></span> - <span class="color-name">Ryan Earwood</span>, Virginia</p>
+            <p>Last update: <span id="lastModified"></span></p>
+        </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const year = new Date().getFullYear();
-            document.getElementById('currentyear').textContent = year;
-            const lastModifiedDate = document.lastModified;
-            document.getElementById('lastModified').textContent = `Last Updated: ${lastModifiedDate}`;
-        });
-        
-    </script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/temples.js" defer></script>
 </body>
 </html>

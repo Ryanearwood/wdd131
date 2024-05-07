@@ -1,30 +1,14 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+  const year = new Date().getFullYear();
+  document.getElementById('currentyear').textContent = year;
+  const lastModifiedDate = document.lastModified;
+  document.getElementById('lastModified').textContent = `Last Updated: ${lastModifiedDate}`;
 
+  const menuButton = document.getElementById('menu');
+  const navigationLinks = document.querySelectorAll('.navigation a');
 
-
-function updateFooter() {
-    var year = new Date().getFullYear();
-    var lastModified = document.lastModified;
-
-    
-    document.getElementById('footerYear').textContent = year;
-    document.getElementById('footerLastModified').textContent = lastModified;
-}
-
-
-window.onload = updateFooter;
-
-
-function toggleMenu() {
-    var nav = document.getElementById('menu');
-    var button = document.getElementById('menuToggle');
-
-    nav.classList.toggle('hidden');
-
-    if (nav.classList.contains('hidden')) {
-        button.textContent = '☰';
-    } else {
-        button.textContent = 'X';
-    }
-}
-
-
+  menuButton.addEventListener('click', () => {
+      menuButton.classList.toggle('open');
+      navigationLinks.forEach(link => link.style.display = link.style.display === 'none' ? 'block' : 'none');
+  });
+});
