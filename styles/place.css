@@ -1,19 +1,24 @@
+:root {
+    --primary-color: #ff0000; /* Change this to your preferred primary color */
+    --secondary-color: #00ff00; /* Change this to your preferred secondary color */
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Change this to your preferred color */
+    background-color: #f0f0f0; /* Change this to your preferred background color */
 }
 
 #container {
     max-width: 800px;
     margin: auto;
-    background-color: #ffffff; /* Change this to your preferred color */
+    background-color: #ffffff; /* Change this to your preferred container background color */
 }
 
 #header {
     font-size: 24px;
     text-align: center;
-    background-color: #ff0000; /* Change this to your preferred color */
-    color: #ffffff; /* Change this to your preferred color */
+    background-color: var(--primary-color);
+    color: #ffffff; /* Change this to your preferred header text color */
     padding: 10px 0;
 }
 
@@ -28,8 +33,8 @@ body {
 
 #data-box, #weather-box {
    position: absolute;
-   background-color: #00ff00; /* Change this to your preferred color */
-   color: #ffffff; /* Change this to your preferred color */
+   background-color: var(--secondary-color);
+   color: #ffffff; /* Change this to your preferred text color */
    padding: 10px;
    /* Adjust top and left properties to position your boxes */
 }
@@ -47,5 +52,5 @@ body {
 footer {
    text-align: center;
    padding: 10px 0;
-   background-color: #f2f2f2; /* Change this to your preferred color */
+   background-color: #f2f2f2; /* Change this to your preferred footer background color */
 }
