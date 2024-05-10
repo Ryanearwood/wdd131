@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Change this to your preferred color */
+}
+
+#container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff; /* Change this to your preferred color */
+}
+
+#header {
+    font-size: 24px;
+    text-align: center;
+    background-color: #ff0000; /* Change this to your preferred color */
+    color: #ffffff; /* Change this to your preferred color */
+    padding: 10px 0;
+}
+
+#main-content {
+    position: relative;
+}
+
+#main-content picture {
+   width: 100%;
+   height: auto;
+}
+
+#data-box, #weather-box {
+   position: absolute;
+   background-color: #00ff00; /* Change this to your preferred color */
+   color: #ffffff; /* Change this to your preferred color */
+   padding: 10px;
+   /* Adjust top and left properties to position your boxes */
+}
+
+#data-box {
+    top: 50px;
+    left: 20px;
+}
+
+#weather-box {
+    top: 50px;
+    right: 20px;
+}
+
+footer {
+   text-align: center;
+   padding: 10px 0;
+   background-color: #f2f2f2; /* Change this to your preferred color */
+}
