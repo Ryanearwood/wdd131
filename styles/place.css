@@ -1,56 +1,118 @@
 :root {
-    --primary-color: #ff0000; /* Change this to your preferred primary color */
-    --secondary-color: #00ff00; /* Change this to your preferred secondary color */
+    --general-font: "Roboto", sans-serif;
+    --primary-color: #000080; 
+    --secondary-color: #FFFFFF; 
+    --primary-font-color: #f8f7f7; 
+    --weather-icon: url(../images/weather-icon.svg)
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Change this to your preferred background color */
-}
-
-#container {
-    max-width: 800px;
+    font-family: var(--general-font);
+    max-width: 1500px;
     margin: auto;
-    background-color: #ffffff; /* Change this to your preferred container background color */
+    min-height: 1vh;
 }
 
-#header {
-    font-size: 24px;
+header {
+    background-color: var(--secondary-color);
+    padding-bottom: 1em;
+}
+
+h1 {
     text-align: center;
     background-color: var(--primary-color);
-    color: #ffffff; /* Change this to your preferred header text color */
-    padding: 10px 0;
+    padding: .5em 1em;
+    margin: 0;
+    color: var(--primary-font-color);
 }
 
-#main-content {
-    position: relative;
+img {
+    width: 100%;
+    margin: 0;
+}
+picture {
+    background-color: var(--primary-color);
 }
 
-#main-content img {
-   width: 100%;
-   height: auto;
+.card {
+    border-bottom: 1px solid #c6c4c4;
+    text-align: center;
 }
 
-#data-box, #weather-box {
-   position: absolute;
-   background-color: var(--secondary-color);
-   color: #ffffff; /* Change this to your preferred text color */
-   padding: 10px;
-   /* Adjust top and left properties to position your boxes */
+.card img {
+    margin: -1em;
+    width: 100%;
 }
 
-#data-box {
-    top: 50px;
-    left: 20px;
+.card table {
+    padding-bottom: 1em;
+    width: 100%;
 }
 
-#weather-box {
-    top: 50px;
-    right: 20px;
+th {
+    text-align: end ;
+    width: 50%;
+}
+
+td {
+    text-align: start;
+    width: 50%;
 }
 
 footer {
-   text-align: center;
-   padding: 10px 0;
-   background-color: #f2f2f2; /* Change this to your preferred footer background color */
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: .5em;
+    color: var(--primary-font-color);
+}
+
+@media screen and (min-width: 750px){
+    h1 {
+        padding: 1em;
+    }
+    h2 {
+        position: relative;
+        right: .5em;
+        text-align: left;
+        color: var(--primary-font-color);
+        background-color: rgba(0, 0, 128, 80%); 
+        padding: .5em 1em .5em 1em;
+        margin: .5em 0;
+    }
+
+    .card {
+        position: absolute;
+        background-color: rgba(238, 238, 238, 80%);
+        padding: 0;
+    }
+    .card img {
+        display: none;
+    }
+
+    main {
+        position: relative;
+        width: 100%;
+        background-color: aliceblue;
+    }
+
+    .temp {
+        position: absolute;
+        width: 250px;
+        margin: 0;
+        right: 1.5em;
+        bottom: 3em;
+    }
+
+    .temp h2::after {
+        content: " __";
+        color: rgba(0, 0, 128, 0%); 
+        background-image: var(--weather-icon);
+        width: 40px;
+    }
+
+    .data {
+        width: 300px;
+        left: 1.5em;
+        top: 3em;
+    }
 }

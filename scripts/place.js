@@ -1,27 +1,14 @@
-window.onload = function() {
-    // Display the windchill factor
-    var temperature = 20; // replace with your static temperature value
-    var windSpeed = 5; // replace with your static wind speed value
-    var windChill = calculateWindChill(temperature, windSpeed);
-    var weatherBox = document.getElementById('weather-box');
-    if (windChill !== "N/A") {
-        weatherBox.innerHTML += '<p>Wind Chill: ' + windChill.toFixed(2) + '°F</p>';
-    } else {
-        weatherBox.innerHTML += '<p>Wind Chill: N/A</p>';
-    }
+const temp = parseInt(document.querySelector("#current-temp").textContent);
+const wind = parseInt(document.querySelector("#windspeed").textContent);
+const wc = document.querySelector("#windchill");
 
-    // Display the current year and the date the document was last modified
-    var currentYear = new Date().getFullYear();
-    document.getElementById('footer').innerHTML = document.getElementById('footer').innerHTML.replace('2024', currentYear);
-    document.getElementById('lastModified').textContent = document.lastModified;
+function calculateWindchill(temp, wind) {
+    return Math.round(13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.4275 * temp * Math.pow(wind, 0.16));
 }
 
-function calculateWindChill(temperature, windSpeed) {
-    var windChill;
-    if (temperature <= 10 && windSpeed > 3) { // Check if conditions are met for wind chill calculation
-        windChill = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
-        return windChill;
-    } else {
-        return "N/A";
-    }
+if (temp <= 10 && wind > 4.8) {
+    wc.innerHTML = `${calculateWindchill(temp, wind)}&deg; C`;
+}
+else {
+    wc.innerHTML = "N/A";
 }

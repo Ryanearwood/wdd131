@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Virginia</title>
+    <meta name="description" content="A page about the state of Virginia in the United States with weather and general information.">
+    <meta name="author" content="Ryan Earwood">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Virginia - United States</h1>
+    </header>
+    <main>
+        <picture>
+            
+            
+            <img src="images/herov-large.webp" alt="A photo of a landscape in Virginia, United States">
+        </picture>
+        <section class="card data">
+            <h2>Data</h2>
+            <table>
+                <tr>
+                    <th>Country:</th>
+                    <td>United States</td>
+                </tr>
+                <tr>
+                    <th>State:</th>
+                    <td>Virginia</td>
+                </tr>
+                <tr>
+                    <th>Population:</th>
+                    <td>8,631,393 (2020)</td>
+                </tr>
+                <tr>
+                    <th>Capital:</th>
+                    <td>Richmond</td>
+                </tr>
+                <tr>
+                    <th>Languages:</th>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <th>Currency:</th>
+                    <td>United States Dollar</td>
+                </tr>
+                <tr>
+                    <th>Time Zone:</th>
+                    <td>UTC -5:00 / -4:00</td>
+                </tr>
+                <tr>
+                    <th>Calling Code:</th>
+                    <td>+1</td>
+                </tr>
+            </table>
+        </section>
+        <section class="card temp">
+            <h2>Weather</h2>
+            <img src="images/weather-icon.svg" alt="The sun with clouds." style="width:100%; height:auto;">
+            <table>
+                <tr>
+                    <th>Temperature:</th>
+                    <td><span id="current-temp">59</span>° F</td>
+                </tr>
+                <tr>
+                    <th>Conditions:</th>
+                    <td>Cloudy</td>
+                </tr>
+                <tr>
+                    <th>Wind:</th>
+                    <td><span id="windspeed">N/A</span></td>
+                </tr>
+                <tr>
+                    <th>Windchill:</th>
+                    <td><span id="windchill"></span></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> | Ryan Earwood | Virginia, United States</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
