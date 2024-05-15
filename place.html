@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
-    <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,8 +17,7 @@
     </header>
     <main>
         <picture>
-            
-            
+            <source srcset="images/herov-large.webp 1600w, images/herov-medium.webp 1200w, images/herov-small.webp 800w" sizes="(max-width: 600px) 800px, (max-width: 900px) 1200px, 1600px">
             <img src="images/herov-large.webp" alt="A photo of a landscape in Virginia, United States">
         </picture>
         <section class="card data">
@@ -62,7 +59,7 @@
         </section>
         <section class="card temp">
             <h2>Weather</h2>
-            <img src="images/weather-icon.svg" alt="The sun with clouds." style="width:100%; height:auto;">
+            <img src="images/weather-icon.svg" alt="The sun with clouds.">
             <table>
                 <tr>
                     <th>Temperature:</th>
@@ -87,5 +84,7 @@
         <p>©<span id="currentyear"></span> | Ryan Earwood | Virginia, United States</p>
         <p id="lastModified"></p>
     </footer>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
 </body>
 </html>
