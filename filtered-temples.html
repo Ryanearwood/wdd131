@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>WDD 131 - Dynamic Web Fundamentals - Temple Album - Ryan Earwood</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals course page.">
+    <meta name="author" content="Ryan Earwood">
+    <link rel="stylesheet" type="text/css" href="styles/filtered-temples.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu"></button>
+        <nav>
+            <ul class="navigation wrap">
+                <li><a class="active" href="#" title="Home" data-filter="all">Home</a></li>
+                <li><a href="#" title="Old" data-filter="old">Old</a></li>
+                <li><a href="#" title="New" data-filter="new">New</a></li>
+                <li><a href="#" title="Large" data-filter="large">Large</a></li>
+                <li><a href="#" title="Small" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container"></div>
+    </main>
+    <footer>
+        <div>
+            <p>©<span id="currentyear"></span> - Ryan Earwood, Virginia, USA</p>
+            <p>Last update: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>
