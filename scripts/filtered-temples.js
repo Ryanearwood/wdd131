@@ -123,35 +123,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
   }
 
+  
   function filterTemples(criteria) {
-      let filteredTemples;
-      switch(criteria) {
-          case 'old':
-              filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
-              break;
-          case 'new':
-              filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
-              break;
-          case 'large':
-              filteredTemples = temples.filter(temple => temple.area > 90000);
-              break;
-          case 'small':
-              filteredTemples = temples.filter(temple => temple.area < 10000);
-              break;
-          default:
-              filteredTemples = temples;
-              break;
-      }
-      displayTemples(filteredTemples);
+    let filteredTemples;
+    switch(criteria) {
+      case 'old':
+        filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+        break;
+      case 'new':
+        filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+        break;
+      case 'large':
+        filteredTemples = temples.filter(temple => temple.area > 90000);
+        break;
+      case 'small':
+        filteredTemples = temples.filter(temple => temple.area < 10000); 
+        break;
+      default:
+        filteredTemples = temples;
+        break;
+    }
+    displayTemples(filteredTemples);
   }
 
   navigationLinks.forEach(link => {
-      link.addEventListener('click', (event) => {
-          event.preventDefault();
-          const filter = link.getAttribute('data-filter');
-          filterTemples(filter);
-      });
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const filter = link.getAttribute('data-filter');
+      filterTemples(filter);
+    });
   });
 
-  displayTemples(temples); 
+  displayTemples(temples);
 });
