@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-  const year = new Date().getFullYear();
-  document.getElementById('currentyear').textContent = year;
-  const lastModifiedDate = document.lastModified;
-  document.getElementById('lastModified').textContent = lastModifiedDate;
+    const year = new Date().getFullYear();
+    document.getElementById('currentyear').textContent = year;
+    const lastModifiedDate = document.lastModified;
+    document.getElementById('lastModified').textContent = lastModifiedDate;
+  
+    const menuButton = document.getElementById('menu');
+    const navigationLinks = document.querySelectorAll('.navigation a');
+    const container = document.querySelector('.container');
+  
+    menuButton.addEventListener('click', () => {
+        menuButton.classList.toggle('open');
+        navigationLinks.forEach(link => link.style.display = link.style.display === 'none' ? 'block' : 'none');
+    });
 
-  const menuButton = document.getElementById('menu');
-  const navigationLinks = document.querySelectorAll('.navigation a');
-  const container = document.querySelector('.container');
-
-  menuButton.addEventListener('click', () => {
-      menuButton.classList.toggle('open');
-      navigationLinks.forEach(link => link.style.display = link.style.display === 'none' ? 'block' : 'none');
-  });
+  
 
   const temples = [
       {
@@ -108,22 +110,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
   ];
 
   function displayTemples(filteredTemples) {
-      container.innerHTML = '';
-      filteredTemples.forEach(temple => {
-          const templeCard = document.createElement('div');
-          templeCard.className = 'temple-card';
-          templeCard.innerHTML = `
-              <h2>${temple.templeName}</h2>
-              <p>Location: ${temple.location}</p>
-              <p>Dedicated: ${temple.dedicated}</p>
-              <p>Area: ${temple.area} square feet</p>
-              <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-          `;
-          container.appendChild(templeCard);
-      });
+    container.innerHTML = '';
+    filteredTemples.forEach(temple => {
+        const templeCard = document.createElement('div');
+        templeCard.className = 'temple-card';
+        templeCard.innerHTML = `
+            <h2>${temple.templeName}</h2>
+            <p>Location: ${temple.location}</p>
+            <p>Dedicated: ${temple.dedicated}</p>
+            <p>Area: ${temple.area} square feet</p>
+        `;
+        let img = new Image();
+        img.onload = function() {
+            img.alt = temple.templeName;
+            img.loading = "lazy";
+            templeCard.appendChild(img);
+        };
+        img.src = temple.imageUrl;
+        container.appendChild(templeCard);
+    });
   }
 
-  
   function filterTemples(criteria) {
     let filteredTemples;
     switch(criteria) {
