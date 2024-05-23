@@ -22,6 +22,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 header {
@@ -63,11 +64,11 @@ header {
 }
 
 .navigation a {
-  display: none;
+  display: block;
   padding: 0.75rem;
   text-decoration: none;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.2em;
   color: #E0E0FF; 
   font-weight: 800;
 }
@@ -83,7 +84,7 @@ main {
   text-align: center;
   width: 90%;
   max-width: 940px;
-  margin: 4rem auto;
+  margin: 2rem auto;
 }
 
 .container {
@@ -137,7 +138,7 @@ footer {
 .temple-card img {
   width: 100%;
   max-width: 400px;
-  height: 250px; 
+  height: auto; 
   object-fit: cover; 
   border-radius: 5px;
 }

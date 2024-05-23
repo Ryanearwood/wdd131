@@ -111,9 +111,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   function createImageElement(src, alt) {
     const img = new Image();
+    img.onload = function() {
+        img.alt = alt;
+        img.loading = "lazy";
+    };
     img.src = src;
-    img.alt = alt;
-    img.loading = "lazy";
     return img;
 }
 
