@@ -109,7 +109,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
       }
   ];
 
-  function displayTemples(filteredTemples) {
+  function createImageElement(src, alt) {
+    const img = new Image();
+    img.src = src;
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+}
+
+const criteriaMapping = {
+    'old': temple => new Date(temple.dedicated).getFullYear() < 1900,
+    'new': temple => new Date(temple.dedicated).getFullYear() > 2000,
+    'large': temple => temple.area > 90000,
+    'small': temple => temple.area < 10000,
+    'default': temple => true
+};
+
+function displayTemples(filteredTemples) {
     container.innerHTML = '';
     filteredTemples.forEach(temple => {
         const templeCard = document.createElement('div');
@@ -120,46 +136,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
             <p>Dedicated: ${temple.dedicated}</p>
             <p>Area: ${temple.area} square feet</p>
         `;
-        let img = new Image();
-        img.onload = function() {
-            img.alt = temple.templeName;
-            img.loading = "lazy";
-            templeCard.appendChild(img);
-        };
-        img.src = temple.imageUrl;
+        const img = createImageElement(temple.imageUrl, temple.templeName);
+        templeCard.appendChild(img);
         container.appendChild(templeCard);
     });
-  }
+}
 
-  function filterTemples(criteria) {
-    let filteredTemples;
-    switch(criteria) {
-      case 'old':
-        filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
-        break;
-      case 'new':
-        filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
-        break;
-      case 'large':
-        filteredTemples = temples.filter(temple => temple.area > 90000);
-        break;
-      case 'small':
-        filteredTemples = temples.filter(temple => temple.area < 10000); 
-        break;
-      default:
-        filteredTemples = temples;
-        break;
-    }
+function filterTemples(criteria) {
+    const filterFunction = criteriaMapping[criteria] || criteriaMapping.default;
+    const filteredTemples = temples.filter(filterFunction);
     displayTemples(filteredTemples);
-  }
+}
 
-  navigationLinks.forEach(link => {
+navigationLinks.forEach(link => {
     link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const filter = link.getAttribute('data-filter');
-      filterTemples(filter);
+        event.preventDefault();
+        const filter = link.getAttribute('data-filter');
+        filterTemples(filter);
     });
-  });
+});
 
-  displayTemples(temples);
+displayTemples(temples);
 });
