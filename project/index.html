@@ -10,21 +10,25 @@
 </head>
 <body>
     <header>
-        <img src="/project/images/logo.png" alt="Logo">
-        <h1>Harrisonburg’s Haven for Water Garden Enthusiasts</h1>
+        <img src="/project/images/logo.png" alt="Logo" class="logo" loading="lazy">
+        <img src="/project/images/rsz_froglily.jpg" alt="fro-lily" class="header-image" loading="lazy">
+        <hr>
+        <h1 class="heading water-garden-heading">Harrisonburg’s Haven for Water Garden Enthusiasts</h1>
     </header>
+    <header class="header-container">
 
-    <nav>
-        <ul>
-            <li><a href="/about.html" class="nav-link">About Us</a></li>
-            <li><a href="/learning.html" class="nav-link">Learning</a></li>
-            <li><a href="/plants-and-fish.html" class="nav-link">Plants and Fish</a></li>
-        </ul>
-    </nav>
+        <nav id="navbar">
+            <ul>
+                <li><a href="/project/about.html" class="nav-link">About Us</a></li>
+                <li><a href="/project/learning.html" class="nav-link">Learning</a></li>
+                <li><a href="/project/plants-and-fish.html" class="nav-link">Plants and Fish</a></li>
+            </ul>
+        </nav>
 
     <section class="parallax">
-        <img src="/project/images/pond1.jpg" alt="Hero Image" class="hero-image">
+        <img src="/project/images/pond1.jpg" alt="Hero Image" class="hero-image" loading="lazy">
     </section>
+    </header>
     <hr>
 
     <div class="two-columns">
@@ -34,14 +38,15 @@
                 <p>Welcome to Harrisonburg Water Gardens, your number one source for all things related to water gardening. We're dedicated to giving you the very best of water gardening advice, with a focus on plant and equipment recommendations, maintenance tips, and learning resources.</p>
                 <p>Founded in 2024, Harrisonburg Water Gardens has come a long way from its beginnings. When we first started out, our passion for water gardening drove us to start this website to help other enthusiasts like you.</p>
                 <p>We hope you enjoy our content as much as we enjoy offering it to you. If you have any questions or comments, please don't hesitate to contact us.
-                    <img src="/project/images/aboutus.jpg" alt="profile" class="profile-image">
+                    <img src="/project/images/aboutus.jpg" alt="profile" class="profile-image" loading="lazy">
                 </p>
             </div>
         </section>
     
-    </section>
+   
 
     <section class="featured-plants">
+        <div class="opaque-background">
         <h2>Featured Plans</h2>
         <p>At Harrisonburg Water Gardens, we offer a variety of plans to help you create the perfect water garden. Here are some of our most popular options:</p>
     
@@ -65,6 +70,7 @@
             </div>
         </li>
     </ul>
+    </div>
     </section>
    
     </div>
@@ -77,17 +83,17 @@
     <ul>
         <li>
             <h3>Know Your Zone</h3>
-            <img src="/project/images/tropicallilies.jpg" alt="tropical-lilies" class="smaller-image">
+            <img src="/project/images/tropicallilies.jpg" alt="tropical-lilies" class="smaller-image" loading="lazy">
             <p>Before ordering plants, make sure you know your USDA hardiness zone. This will help you choose plants that are suitable for your climate.</p>
         </li>
         <li>
             <h3>Choose the Right Equipment</h3>
-            <img src="/project/images/liner.jpg" alt="liner">
+            <img src="/project/images/liner.jpg" alt="liner" class="smaller-image" loading="lazy">
             <p>Invest in high-quality equipment. While it may be more expensive upfront, it will save you money in the long run as it will last longer and require less maintenance.</p>
         </li>
         <li>
             <h3>Consider the Size of Your Garden</h3>
-            <img src="/project/images/bigpond.jpg" alt="big-pond">
+            <img src="/project/images/bigpond.jpg" alt="big-pond" class="smaller-image" loading="lazy">
             <p>When ordering plants and equipment, consider the size of your water garden. You don't want to overcrowd your garden or choose equipment that is too large or small.</p>
         </li>
         <li>
@@ -105,17 +111,17 @@
             <li>
                 <h3>Water Garden Designer</h3>
                 <p>Use your creativity and knowledge of plants to design beautiful and functional water gardens for our clients.</p>
-                <img src="/project/images/pondplan.jpg" alt="plan" class="featured-jobs-image">
+                <img src="/project/images/pondplan.jpg" alt="plan" class="featured-jobs-image" loading="lazy">
             </li>
             <li>
                 <h3>Water Garden Maintenance Specialist</h3>
                 <p>Help our clients keep their water gardens in top shape with regular maintenance and care.</p>
-                <img src="/project/images/maintain.jpg" alt="maintain" class="featured-jobs-image">
+                <img src="/project/images/maintain.jpg" alt="maintain" class="featured-jobs-image" loading="lazy">
             </li>
             <li>
                 <h3>Customer Service Representative</h3>
                 <p>Help our customers find the products and services they need, and provide excellent customer service.</p>
-                <img src="/project/images/service.jpg" alt="service" class="featured-jobs-image">
+                <img src="/project/images/service.jpg" alt="service" class="featured-jobs-image" loading="lazy">
             </li>
         </ul>
     </section>
@@ -125,34 +131,35 @@
         <h2>Ranking Top 5</h2>
         <p>Check out our top 5 picks in water gardening:</p>
         
-        <ol>
-            <li>
+        <div class="grid-container">
+            <div class="grid-item">
                 <h3>Water Lily</h3>
+                <img src="/project/images/waterlily.jpg" alt="lily" class="featured-image" loading="lazy">
                 <p>Known for their beautiful flowers, water lilies are a classic choice for any water garden.</p>
-                <img src="/project/images/waterlily.jpg" alt="lily" class="featured-jobs-image">
-            </li>
-            <li>
+            </div>
+            <div class="grid-item">
                 <h3>Koi Fish</h3>
+                <img src="/project/images/koi.jpg" alt="koi" class="featured-image" loading="lazy">
                 <p>Koi fish are not only beautiful, but they also help keep your pond clean by eating algae.</p>
-                <img src="/project/images/koi.jpg" alt="koi" class="featured-jobs-image">
-            </li>
-            <li>
+            </div>
+            <div class="grid-item">
                 <h3>Lotus Plant</h3>
+                <img src="/project/images/lotus.jpg" alt="lotus" class="featured-image" loading="lazy">
                 <p>The lotus plant is a symbol of purity and beauty, and it can be a stunning addition to your water garden.</p>
-                <img src="/project/images/lotus.jpg" alt="lotus" class="featured-jobs-image">
-            </li>
-            <li>
+            </div>
+            <div class="grid-item">
                 <h3>Fountain Pump</h3>
+                <img src="/project/images/pump.jpg" alt="pump" class="featured-image" loading="lazy">
                 <p>A fountain pump is a great way to keep the water in your garden moving, which can help prevent the growth of algae.</p>
-                <img src="/project/images/pump.jpg" alt="pump" class="featured-jobs-image">
-            </li>
-            <li>
+            </div>
+            <div class="grid-item">
                 <h3>Pond Liner</h3>
+                <img src="/project/images/liner2.jpg" alt="liner" class="featured-image" loading="lazy">
                 <p>A good quality pond liner is essential for maintaining the health of your water garden.</p>
-                <img src="/project/images/liner2.jpg" alt="liner" class="featured-jobs-image">
-            </li>
-        </ol>
+            </div>
+        </div>
     </section>
+    
     <hr>
     
 
@@ -160,22 +167,35 @@
         <h2>Contact Us</h2>
     <form id="contactForm">
         <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
+        <input type="text" id="name" name="name" autocomplete="name"><br>
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" autocomplete="email"><br>
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message"></textarea><br>
+        <textarea id="message" name="message" autocomplete="on"></textarea><br>
         <input type="submit" value="Submit">
     </form>
     </section>
     <hr>
 
     <footer>
-        <div>
+        <div class="footer-content">
             <p>©<span id="currentyear"></span> - <span class="color-name">Ryan Earwood</span>, Virginia</p>
             <p>Last update: <span id="lastModified"></span></p>
         </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="/project/images/imagefb.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="/project/images/imageinsta.png" alt="Instagram">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="/project/images/imagetwitter.png" alt="Twitter">
+            </a>
+        </div>
+        
     </footer>
+
     <script src="/project/scripts/watergarden.js"></script>
     <script src="/scripts/getdates.js" defer></script>
 
