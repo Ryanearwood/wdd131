@@ -252,16 +252,7 @@ p {
     color: #ffffff; 
     background-color: rgba(0, 0, 0, 0.7);
 }
-.parallax {
-    
-    background-image: url("/project/images/waterfall.jpg");
-    background-image: url("/project/images/nightpond.jpg");
-    min-height: 500px; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .container {
     width: 80%;
     margin: 0 auto;
