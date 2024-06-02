@@ -239,7 +239,7 @@ p {
 
 .profile-image {
     width: 200px; 
-    height: auto;
+    height: 200px;
     float: left;
     margin: 0 20px 20px 0;
 }

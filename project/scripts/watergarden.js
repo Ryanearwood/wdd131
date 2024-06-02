@@ -4,11 +4,11 @@ window.onload = function() {
 
     for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].addEventListener('mouseover', function() {
-            this.style.color = '#4CAF50'; // Change color on mouse over
+            this.style.color = '#4CAF50'; 
         });
 
         navLinks[i].addEventListener('mouseout', function() {
-            this.style.color = ''; // Reset color on mouse out
+            this.style.color = ''; 
         });
     }
 
@@ -22,31 +22,31 @@ window.onload = function() {
         document.getElementById('storedMessage').textContent = 'Message: ' + message;
     }
 
-    // Get all the elements with the class "plan-name"
+    
     var planNames = document.getElementsByClassName("plan-name");
 
-    // Loop through the elements
+   
     for (var i = 0; i < planNames.length; i++) {
-        // Add a "mouseover" event listener to each element
+      
         planNames[i].addEventListener("mouseover", function() {
-            // Get the next sibling element (the plan details)
+           
             var planDetails = this.nextElementSibling;
-            // Show the plan details
+          
             planDetails.style.display = "block";
         });
 
-        // Add a "mouseout" event listener to each element
+       
         planNames[i].addEventListener("mouseout", function() {
-            // Get the next sibling element (the plan details)
+            
             var planDetails = this.nextElementSibling;
-            // Hide the plan details
+         
             planDetails.style.display = "none";
         });
     }
 };
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from being submitted normally
+    event.preventDefault(); 
 
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
@@ -58,3 +58,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     alert('Form data saved!');
 });
+
+
